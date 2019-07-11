@@ -18,7 +18,6 @@ class TableViewController: UIViewController {
         
         let film = Films("Avengers: Endgame", releasedOn: "2019", directedBy: "Russo Bros.", with: ["Robet Downey Jr., Chris Evans"], description: "After the snap")
         let film2 = Films("Avengers: INFINITY WAR", releasedOn: "2018", directedBy: "Russo Bros.", with: ["Robet Downey Jr., Chris Evans"], description: "Before the snap")
-        let film3 = Films("Avengers: Age of Ultron", releasedOn: "2015", directedBy: "Unknow", with: ["Robet Downey Jr., Chris Evans"], description: "Ultron tries to kill Jarvis")
         array.append(film)
         array.append(film2)
         print(array)
@@ -41,7 +40,7 @@ extension TableViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "textCell") as? FilmTableViewCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "textCell") as? ContactListTableViewCell else{
             return UITableViewCell()
         }
         let film = array[indexPath.row]

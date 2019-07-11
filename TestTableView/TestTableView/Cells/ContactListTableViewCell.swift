@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilmTableViewCell: UITableViewCell {
+class ContactListTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseYearLabel: UILabel!
 
