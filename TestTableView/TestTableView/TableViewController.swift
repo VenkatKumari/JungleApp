@@ -53,7 +53,7 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PersonArray!.count
+        return PersonArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,10 +61,10 @@ extension TableViewController: UITableViewDataSource{
             return UITableViewCell()
         }
         
-        let person = PersonArray![indexPath.row]
-        cell.titleLabel.text = formatName(name: person.name)
-        cell.releaseYearLabel.text = person.email
-        
+        if let person = PersonArray?[indexPath.row] {
+            cell.titleLabel.text = formatName(name: person.name)
+            cell.releaseYearLabel.text = person.email
+        }
         return cell
     }
     

@@ -97,6 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bnt-lz-ldZ"/>
                     <connections>
+                        <outlet property="tableView" destination="Z5U-Qa-Gmm" id="cTb-uH-dtv"/>
                         <segue destination="bB8-FX-g1I" kind="show" identifier="showDetail" id="yuh-cP-REh"/>
                     </connections>
                 </viewController>
