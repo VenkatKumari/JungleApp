@@ -82,8 +82,8 @@
 				4CBF30492270D29700651196 /* TableViewController.swift */,
 				4CBF304B2270D29700651196 /* Main.storyboard */,
 				4CBF304E2270D29900651196 /* Assets.xcassets */,
-				4CBF30502270D29900651196 /* LaunchScreen.storyboard */,
 				4CBF30532270D29900651196 /* Info.plist */,
+				4CBF30502270D29900651196 /* LaunchScreen.storyboard */,
 				4C49A30E228C88510019B31B /* DetailViewController.swift */,
 			);
 			path = TestTableView;

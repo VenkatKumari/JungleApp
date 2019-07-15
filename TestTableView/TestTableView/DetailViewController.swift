@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    var film: Films?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

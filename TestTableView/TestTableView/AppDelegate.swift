@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TestTableView
 //
-//  Created by epita on 24/04/2019.
+
 //  Copyright © 2019 epita. All rights reserved.
 //
 

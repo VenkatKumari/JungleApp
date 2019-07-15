@@ -10,42 +10,60 @@ import UIKit
 
 class TableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    //var array = [String]()
-    var array = [Films]()
-    var selectedFilm: Films?
+
+    var PersonArray : [PersonDetail]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let film = Films("Avengers: Endgame", releasedOn: "2019", directedBy: "Russo Bros.", with: ["Robet Downey Jr., Chris Evans"], description: "After the snap")
-        let film2 = Films("Avengers: INFINITY WAR", releasedOn: "2018", directedBy: "Russo Bros.", with: ["Robet Downey Jr., Chris Evans"], description: "Before the snap")
-        array.append(film)
-        array.append(film2)
-        print(array)
-        //array = ["Super", "fast", "super",  "easy", "Super", "fast","Super", "fast", "Super", "fast", "super", "easy"]
-        
+        fetchUsers()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         guard let detailViewController = segue.destination as? DetailViewController else {
             return
         }
-        detailViewController.film = selectedFilm
+        //detailViewController.film = selectedFilm
     }
-
+    
+    func fetchUsers(){
+        var request = URLRequest(url: URL(string: "https://randomuser.me/api/?results=10")!)
+        
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            do{
+                let jsonDecoder = JSONDecoder()
+                let responseModel = try jsonDecoder.decode(Person.self, from: data!)
+                self.PersonArray = responseModel.results
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                print(responseModel)
+            } catch let error {
+                print("JSON Serialization ERROR: ", error)
+            }
+            }.resume()
+    }
+    
+    func formatName(name: Name) -> String {
+        return name.title.capitalized + " " + name.first.capitalized + " " + name.last.uppercased()
+    }
 }
 
 extension TableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return PersonArray!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "textCell") as? ContactListTableViewCell else{
             return UITableViewCell()
         }
-        let film = array[indexPath.row]
-        cell.titleLabel.text = film.title
-        cell.releaseYearLabel.text = film.releaseYear
+        
+        let person = PersonArray![indexPath.row]
+        cell.titleLabel.text = formatName(name: person.name)
+        cell.releaseYearLabel.text = person.email
         
         return cell
     }
@@ -55,8 +73,8 @@ extension TableViewController: UITableViewDataSource{
 
 extension TableViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedFilm = array[indexPath.row]
-    performSegue(withIdentifier: "showDetail", sender: nil)
+        //selectedFilm = array[indexPath.row]
+    //performSegue(withIdentifier: "showDetail", sender: nil)
         
     }
     
