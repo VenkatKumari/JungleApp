@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		4C434BB2227B6695008161A7 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
 		4C49A30E228C88510019B31B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		4CBF30442270D29700651196 /* TestTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBF30442270D29700651196 /* JungleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JungleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBF30472270D29700651196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBF30492270D29700651196 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4CBF304C2270D29700651196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		4CBF30452270D29700651196 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CBF30442270D29700651196 /* TestTableView.app */,
+				4CBF30442270D29700651196 /* JungleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4CBF30432270D29700651196 /* TestTableView */ = {
+		4CBF30432270D29700651196 /* JungleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4CBF30562270D29900651196 /* Build configuration list for PBXNativeTarget "TestTableView" */;
+			buildConfigurationList = 4CBF30562270D29900651196 /* Build configuration list for PBXNativeTarget "JungleApp" */;
 			buildPhases = (
 				4CBF30402270D29700651196 /* Sources */,
 				4CBF30412270D29700651196 /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = TestTableView;
+			name = JungleApp;
 			productName = TestTableView;
-			productReference = 4CBF30442270D29700651196 /* TestTableView.app */;
+			productReference = 4CBF30442270D29700651196 /* JungleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4CBF303F2270D29700651196 /* Build configuration list for PBXProject "TestTableView" */;
+			buildConfigurationList = 4CBF303F2270D29700651196 /* Build configuration list for PBXProject "JungleApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4CBF30432270D29700651196 /* TestTableView */,
+				4CBF30432270D29700651196 /* JungleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -316,7 +316,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.epita.TestTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.epita.JungleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,7 +333,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.epita.TestTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.epita.JungleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4CBF303F2270D29700651196 /* Build configuration list for PBXProject "TestTableView" */ = {
+		4CBF303F2270D29700651196 /* Build configuration list for PBXProject "JungleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CBF30542270D29900651196 /* Debug */,
@@ -352,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4CBF30562270D29900651196 /* Build configuration list for PBXNativeTarget "TestTableView" */ = {
+		4CBF30562270D29900651196 /* Build configuration list for PBXNativeTarget "JungleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CBF30572270D29900651196 /* Debug */,

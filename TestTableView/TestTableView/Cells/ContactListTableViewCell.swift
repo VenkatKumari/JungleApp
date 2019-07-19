@@ -10,6 +10,7 @@ import UIKit
 
 class ContactListTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var labelthumb: UIImageView!
     @IBOutlet weak var releaseYearLabel: UILabel!
 
     
